@@ -4,16 +4,19 @@ from flask_jwt_extended import JWTManager
 from controllers import login, protected, user, home
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from controllers import blueprint
-
+from database import init_app , test_connection
 
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['JWT_SECRET_KEY'] = 'super-secret-key'
+init_app(app)
 
-db = SQLAlchemy(app)
-jwt = JWTManager(app)
+# Test the database connection
+connected, message = test_connection()
+if connected:
+    print("Database connection:", message)
+else:
+    print("Database connection:", message)
 
 app.register_blueprint(blueprint)
 
