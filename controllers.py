@@ -8,8 +8,15 @@ blueprint = Blueprint('controllers', __name__)
 
 @blueprint.route('/', methods=['GET'])
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
+@blueprint.route('/login')
+def login():
+    return render_template('login.html')
+
+@blueprint.route('/signup')
+def signup():
+    return render_template('signup.html')
 
 def login():
     username = request.json.get('username')
