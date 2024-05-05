@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">MyCar<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="content">
+        <h2>We care</h2>
+        <p><h2>    about your car
+        </h2></p>
+        <button>Login</button>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="box">
+        <i class="fas fa-quote-left quote"></i>
+        <p>advice</p>
+        <div class="content">
+          <div class="info">
+            <div class="name"></div>
+            <div class="job">Oil filter</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="image">
+            <img src="{{ url_for('static', filename='images/oil-filter.png') }}" alt=""> 
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left quote"></i>
+        <p>advice</p>
+        <div class="content">
+          <div class="info">
+            <div class="name"></div>
+            <div class="job">Engine</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="image">
+            <img src="{{ url_for('static', filename='images/car-engine.png') }}" alt="">          </div>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left  quote"></i>
+        <p>advice</p>
+        <div class="content">
+          <div class="info">
+            <div class="name"></div>
+            <div class="job">Wheels</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="image">
+            
+            <img src="{{ url_for('static', filename='images/steering-wheel.png') }}" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    
+  </body>
+
+<footer>
+  
+  <section class="footer">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Compressions</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Collection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="links">
+          <li><a href="#">Free Designs</a></li>
+          <li><a href="#">Latest Designs</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Popular Designs</a></li>
+          <li><a href="#">Art Skills</a></li>
+          <li><a href="#">New Uploads</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="links">
+          <li><a href="#">Customer Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>
+          Subscribe to our newsletter for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+        <form action="#">
+          <input type="text" placeholder="Your email" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</footer>
+
+  </html>

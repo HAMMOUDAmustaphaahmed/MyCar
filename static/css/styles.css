@@ -1,0 +1,372 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  color: #000000;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: #C06B3E;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: #c81818;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #C06B3E;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/4404780-femme-mecanique-automobile-reparation-voiture-vectoriel.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #e64b13;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.hero-section .content .p h2 {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+  padding-left: 30px;
+}
+
+.hero-section .content button {
+  background: transparent;
+  padding: 30px 30px;
+  border: #e6c42f;
+  border-style: solid;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+  color: #2347e9;
+  
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #cb5c1b;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #e6792f;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+
+
+/******* Wrapper *******/
+
+::selection{
+  background: rgba(6, 13, 14, 0.3);
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background: #fff;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #17a2b8;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #17a2b8;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #17a2b8;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+
+
+/***********  Footer  ************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: 50px;
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
