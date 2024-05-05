@@ -7,10 +7,8 @@ from models import User, Car
 blueprint = Blueprint('controllers', __name__)
 
 
-# Handler function for 404 errors
-@blueprint.route('/404')
-def page_not_found():
-    return render_template('404.html'), 404
+
+
 
 @blueprint.route('/', methods=['GET'])
 def home():
