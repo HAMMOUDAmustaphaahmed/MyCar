@@ -9,14 +9,17 @@
 </head>
 <body>
   <div class="wrapper">
-    <form action="#">
+    <form action="/login" method="post">
       <h2>Login</h2>
+      {% if msg %}
+        <p>{{ msg }}</p>
+      {% endif %}
       <div class="input-field">
-        <input type="text" required>
+        <input type="text" name="username" required>
         <label>Enter your email</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
+        <input type="password" name="password" required>
         <label>Enter your password</label>
       </div>
       <div class="forget">
@@ -26,6 +29,7 @@
         </label>
         <a href="#">Forgot password?</a>
       </div>
+      <input type="hidden" name="_method" value="POST">
       <button type="submit">Log In</button>
       <div class="register">
         <p>Don't have an account? <a href="/signup">Register</a></p>

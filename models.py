@@ -13,3 +13,7 @@ class Car(db.Model):
     model = db.Column(db.String(80), nullable=False)
     year = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+def init_app(app):
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/mycar'  # Update with your MySQL configuration
+    db.init_app(app)
